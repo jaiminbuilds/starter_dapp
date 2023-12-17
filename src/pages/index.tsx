@@ -7,8 +7,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { useConnectModal, useAccountModal, useChainModal } from '@rainbow-me/rainbowkit'
 import { useSignMessage } from 'wagmi'
 import socketSwap from './socketSwap'
-
-socketSwap()
+import acrossSwap from './acrossSwap'
 
 export default function Home() {
   return (
@@ -104,6 +103,26 @@ function Main() {
             </button>
           )}
         </div>
+      </div>
+
+      <div>
+        <button
+          onClick={() => socketSwap()}
+          type="button"
+          className="m-1 rounded-lg bg-orange-500 py-1 px-3 text-white transition-all duration-150 hover:scale-105"
+        >
+          Socket Swap
+        </button>
+      </div>
+
+      <div>
+        <button
+          onClick={() => acrossSwap()}
+          type="button"
+          className="m-1 rounded-lg bg-orange-500 py-1 px-3 text-white transition-all duration-150 hover:scale-105"
+        >
+          Across
+        </button>
       </div>
 
       <div className="w-full max-w-xl rounded-xl bg-sky-500/10 p-6 text-center">
